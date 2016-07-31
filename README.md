@@ -23,11 +23,11 @@ Below is a *very* simple example. Note the two lines, if you provide a string, t
     
     <script>
       
-      console.log(XSDT().$ === window.document) // true
+      XSDT().$ === window.document // true
       
-      console.log(XSDT("myDiv").first().$ === ) // #text "Hello world!"
+      XSDT("myDiv").first().$ // #text "Hello world!"
       
-      console.log(XSDT(document.getElementById("myDiv")).first().$) // #text "Hello world!"
+      XSDT(document.getElementById("myDiv")).first().$ // #text "Hello world!"
       
     </script>
     
@@ -52,9 +52,7 @@ Below are the methods your `XSDT` instance provides you.
     
     XSDT("someDiv").call(modify,increase)
     
-    // ...
-    
-    XSDT("someDiv").$.count === 2
+    XSDT("someDiv").$.count === 2 // true
     
   </script>
   ```
@@ -90,11 +88,11 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").child(0).$) // <a>
+    XSDT("container").child(0).$ // <a>
     
-    console.log(XSDT("container").child(1).$) // <b>
+    XSDT("container").child(1).$ // <b>
     
-    console.log(XSDT("container").child(2).$) // <c>
+    XSDT("container").child(2).$ // <c>
     
   </script>
   ```
@@ -106,7 +104,7 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").first().$) // <a>
+    XSDT("container").first().$ // <a>
     
   </script>
   ```
@@ -118,7 +116,7 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").last().$) // <c>
+    XSDT("container").last().$ // <c>
     
   </script>
   ```
@@ -130,9 +128,9 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").first().next().$) // <b>
+    XSDT("container").first().next().$ // <b>
     
-    console.log(XSDT("container").last().next().$) // <a>
+    XSDT("container").last().next().$ // <a>
     
   </script>
   ```
@@ -144,9 +142,9 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").first().previous().$) // <c>
+    XSDT("container").first().previous().$ // <c>
     
-    console.log(XSDT("container").last().previous().$) // <b>
+    XSDT("container").last().previous().$ // <b>
     
   </script>
   ```
@@ -158,13 +156,13 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").child(1).$) // <b>
+    XSDT("container").child(1).$ // <b>
     
-    console.log(XSDT("container").child(1).start().$) // <a>
+    XSDT("container").child(1).start().$ // <a>
     
-    console.log(XSDT("container").child(1).start(1).$) // <b>
+    XSDT("container").child(1).start(1).$ // <b>
     
-    console.log(XSDT("container").child(1).start(10).$) // <c>
+    XSDT("container").child(1).start(10).$ // <c>
     
   </script>
   ```
@@ -176,13 +174,13 @@ Below are the methods your `XSDT` instance provides you.
   
   <script>
     
-    console.log(XSDT("container").child(1).$) // <b>
+    XSDT("container").child(1).$ // <b>
     
-    console.log(XSDT("container").child(1).end().$) // <c>
+    XSDT("container").child(1).end().$ // <c>
     
-    console.log(XSDT("container").child(1).end(1).$) // <b>
+    XSDT("container").child(1).end(1).$ // <b>
     
-    console.log(XSDT("container").child(1).end(10).$) // <a>
+    XSDT("container").child(1).end(10).$ // <a>
     
   </script>
   ```
